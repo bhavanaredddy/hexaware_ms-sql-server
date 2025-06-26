@@ -126,7 +126,7 @@ if __name__ == "__main__":
 
 import math
 
-# ➕ Add people and their custom shares
+#  Add people and their custom shares
 def add_people():
     people = []
     total_share = 0
@@ -141,7 +141,7 @@ def add_people():
 
     return people, total_share
 
-# 💰 Split the bill
+
 def split_bill():
     try:
         total_amount = float(input("Enter total bill amount: ₹"))
@@ -155,9 +155,9 @@ def split_bill():
 
         return people
     except ValueError:
-        print("❌ Invalid input. Please enter valid numbers.")
+        print(" Invalid input. Please enter valid numbers.")
 
-# 🧾 Show who pays most/least using lambda
+
 def show_summary(people):
     if not people:
         print("No people to show summary for.")
@@ -166,10 +166,10 @@ def show_summary(people):
     highest = max(people, key=lambda x: x["amount"])
     lowest = min(people, key=lambda x: x["amount"])
 
-    print(f"\n💸 {highest['name']} pays the most: ₹{highest['amount']:.2f}")
-    print(f"🪙 {lowest['name']} pays the least: ₹{lowest['amount']:.2f}")
+    print(f"\n {highest['name']} pays the most: ₹{highest['amount']:.2f}")
+    print(f" {lowest['name']} pays the least: ₹{lowest['amount']:.2f}")
 
-# 🧭 Menu
+
 def main():
     while True:
         print("\n=== Bill Splitter App ===")
@@ -181,11 +181,11 @@ def main():
             people = split_bill()
             show_summary(people)
         elif choice == "2":
-            print("👋 Exiting. Goodbye!")
+            print(" Exiting. Goodbye!")
             break
         else:
             print("❌ Invalid choice.")
 
-# 🚀 Run the app
+
 if __name__ == "__main__":
     main()
